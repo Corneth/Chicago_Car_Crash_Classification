@@ -20,7 +20,7 @@ The city of Chicago founded a program called the Vision Zero Chicago, to try to 
 
     
 ## Method:
-- I will be getting the full data from the Chicago open data portal and performing EDA as well as sampling the first 50K results that show up.
+- I will be getting the full data from the Chicago open data portal and performing EDA as well as sampling the results that come out of the EDA.
 - Fitting the data to a Random Tree Classifier after splitting the data into training and testing data at a 60/40 split
 
 - Interpreting the data into recommendations that Chicago can do to progress farther into thier goal.
