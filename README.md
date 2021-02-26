@@ -65,5 +65,5 @@ Looks almost the same but when you look at the actual features that are in the t
 # Future work:
 - Possible future works that can be used to make better predictions is using the location data to interpret where the most common accidents actually happen and figure out what can be done in those areas to minimise or take the accidents away completely.
 - Use the weather conditions to see if there is a pattern in a more hazardous condition and compare that with the primary causes.
-- Improve the model by adding more detailed data / more recent data
+- Improve the model by adding more detailed data / more recent data.
 
