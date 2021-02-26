@@ -33,14 +33,14 @@ After I grabbed all the data from the site I went ahead and took care of all the
 After the scrubbing of the data I took a look at how the dataset was distributed and went a little bit into a few meaningful categories that I thought would be a major contributing factors in the crashes like age, day of the week and the time of the day. 
 ![pairplot](Pictures/pairplot.png)
 After that I took a look at our classes to see if there was an imbalance and there was.
-![countplot](Pictures/Class Imbalance.png)
+![Class Imbalance](Pictures/Class Imbalance.png)
 
 # M- Model:
 For the model I went with the Random Forest Classifier. To be able to use this classifier I had to encode my data with the ordinal encoder from sklearn.preprocessing. After I fit the classifier with just a generic Random Forest I went ahead and used GridSearchCV to find the best parameters for the secondary classifier. Before I used those parameters though I also went ahead and used the RandomizedSearchCV as well. They both were the same at the end so I used the RandomizedSearchCV for speed sake.
 Initial Model AUC:
-![AUC](Pictures/Initial AUC.png)
+![Initial AUC](Pictures/Initial AUC.png)
 Hypertuned Model AUC:
-![Auc2](Pictures/Hypertuned AUC.png)
+![Hypertuned AUC](Pictures/Hypertuned AUC.png)
 
 # N - Interperate:
 Here we are going to take a look at what the modeled data says about the crash data.
@@ -51,16 +51,16 @@ Here we are going to take a look at what the modeled data says about the crash d
 - ![hypertuned AUC](Pictures/Hypertuned AUC.png)
 - ![hypertuned Model features](Pictures/Hypertuned models features.png)
 ## - Initial Model:
-![Accuracy](Pictures/Initial Model.png)
+![Initial Model](Pictures/Initial Model.png)
 ## - Hypertuned model:
-![Accuracy2](Pictures/hypertuned model.png)
+![hypertuned model](Pictures/hypertuned model.png)
 
 Looks almost the same but when you look at the actual features that are in the top 5 most important you see the reason why. The biggest important feature in both of them is the Driver_Action, followed by the First_Crash_type.
 ## - Initial importance Graph:
-![Feature Importance Bar](Feature importance Initial bar.png)
+![Feature importance Initial bar](Pictures/Feature importance Initial bar.png)
 
 ## - Hypertuned Importance Graph:
-![Feature Importance Bar Hypertuned](Feature importance hyper bar.png)
+![Feature importance Bar hyper bar](Pictures/Feature importance hyper bar.png)
 
 # Future work:
 - Possible future works that can be used to make better predictions is using the location data to interpret where the most common accidents actually happen and figure out what can be done in those areas to minimise or take the accidents away completely.
