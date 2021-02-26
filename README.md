@@ -26,12 +26,44 @@ I obtained my data from this site:
 - People: https://data.cityofchicago.org/Transportation/Traffic-Crashes-People/u6pd-qa9d
 - Vehicles: https://data.cityofchicago.org/Transportation/Traffic-Crashes-Vehicles/68nd-jvt3
 
-S- Scrub:
+# S- Scrub:
 After I grabbed all the data from the site I went ahead and took care of all the missing values by filling them in with 0's for the integers and floats, and I filled in the categoricals with 'Unknown'. Then I looked at the entire dataset and determined what was used for placeholders and had too many missing values that wouldn't be usefull for my model and removed those columns. after everything I was left with ~45 columns. I can't really do too much 
 
-E - Explore:
+# E - Explore:
 After the scrubbing of the data I took a look at how the dataset was distributed and went a little bit into a few meaningful categories that I thought would be a major contributing factors in the crashes like age, day of the week and the time of the day. 
 ![pairplot](Pictures/pairplot.png)
 After that I took a look at our classes to see if there was an imbalance and there was.
 ![countplot](Pictures/Class Imbalance.png)
+
+# M- Model:
+For the model I went with the Random Forest Classifier. To be able to use this classifier I had to encode my data with the ordinal encoder from sklearn.preprocessing. After I fit the classifier with just a generic Random Forest I went ahead and used GridSearchCV to find the best parameters for the secondary classifier. Before I used those parameters though I also went ahead and used the RandomizedSearchCV as well. They both were the same at the end so I used the RandomizedSearchCV for speed sake.
+Initial Model AUC:
+![AUC](Pictures/Initial AUC.png)
+Hypertuned Model AUC:
+![Auc2](Pictures/Hypertuned AUC.png)
+
+# N - Interperate:
+Here we are going to take a look at what the modeled data says about the crash data.
+- Initial model shows that the accuracy of the classification is at an 88% classification success of the dataset
+![Initial AUC](Pictures/Initial AUC.png)
+![Initial models features](Pictures/Initial models features.png)
+- Hypertuned Model shows that the accuracy of the classification is at an 89% classification success of the dataset
+- ![hypertuned AUC](Pictures/Hypertuned AUC.png)
+- ![hypertuned Model features](Pictures/Hypertuned models features.png)
+## - Initial Model:
+![Accuracy](Pictures/Initial Model.png)
+## - Hypertuned model:
+![Accuracy2](Pictures/hypertuned model.png)
+
+Looks almost the same but when you look at the actual features that are in the top 5 most important you see the reason why. The biggest important feature in both of them is the Driver_Action, followed by the First_Crash_type.
+## - Initial importance Graph:
+![Feature Importance Bar](Feature importance Initial bar.png)
+
+## - Hypertuned Importance Graph:
+![Feature Importance Bar Hypertuned](Feature importance hyper bar.png)
+
+# Future work:
+- Possible future works that can be used to make better predictions is using the location data to interpret where the most common accidents actually happen and figure out what can be done in those areas to minimise or take the accidents away completely.
+- Use the weather conditions to see if there is a pattern in a more hazardous condition and compare that with the primary causes.
+- Improve the model by adding more detailed data / more recent data
 
