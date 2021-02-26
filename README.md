@@ -33,5 +33,5 @@ E - Explore:
 After the scrubbing of the data I took a look at how the dataset was distributed and went a little bit into a few meaningful categories that I thought would be a major contributing factors in the crashes like age, day of the week and the time of the day. 
 ![pairplot](Pictures/pairplot.png)
 After that I took a look at our classes to see if there was an imbalance and there was.
-![countplot](Pictures/Class Imblanace.png)
+![countplot](Pictures/Class Imbalance.png)
 
