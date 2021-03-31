@@ -33,34 +33,34 @@ After I grabbed all the data from the site I went ahead and took care of all the
 After the scrubbing of the data I took a look at how the dataset was distributed and went a little bit into a few meaningful categories that I thought would be a major contributing factors in the crashes like age, day of the week and the time of the day. 
 ![pairplot](Pictures/pairplot.png)
 After that I took a look at our classes to see if there was an imbalance and there was.
-![Class Imbalance](Pictures/Class Imbalance.png)
+![ClassImbalance](Pictures/ClassImbalance.png)
 
 # M- Model:
 For the model I went with the Random Forest Classifier. To be able to use this classifier I had to encode my data with the ordinal encoder from sklearn.preprocessing. After I fit the classifier with just a generic Random Forest I went ahead and used GridSearchCV to find the best parameters for the secondary classifier. Before I used those parameters though I also went ahead and used the RandomizedSearchCV as well. They both were the same at the end so I used the RandomizedSearchCV for speed sake.
 Initial Model AUC:
-![Initial AUC](Pictures/Initial AUC.png)
+![InitialAUC](Pictures/InitialAUC.png)
 Hypertuned Model AUC:
-![Hypertuned AUC](Pictures/Hypertuned AUC.png)
+![HypertunedAUC](Pictures/HypertunedAUC.png)
 
 # N - Interperate:
 Here we are going to take a look at what the modeled data says about the crash data.
 - Initial model shows that the accuracy of the classification is at an 88% classification success of the dataset
-![Initial AUC](Pictures/Initial AUC.png)
-![Initial models features](Pictures/Initial models features.png)
+![InitialAUC](Pictures/InitialAUC.png)
+![Initialmodelsfeatures](Pictures/Initialmodelsfeatures.png)
 - Hypertuned Model shows that the accuracy of the classification is at an 89% classification success of the dataset
-- ![hypertuned AUC](Pictures/Hypertuned AUC.png)
-- ![hypertuned Model features](Pictures/Hypertuned models features.png)
+- ![hypertunedAUC](Pictures/HypertunedAUC.png)
+- ![hypertunedModelfeatures](Pictures/Hypertunedmodelsfeatures.png)
 ## - Initial Model:
-![Initial Model](Pictures/Initial Model.png)
+![InitialModel](Pictures/InitialModel.png)
 ## - Hypertuned model:
-![hypertuned model](Pictures/hypertuned model.png)
+![hypertunedmodel](Pictures/hypertunedmodel.png)
 
 Looks almost the same but when you look at the actual features that are in the top 5 most important you see the reason why. The biggest important feature in both of them is the Driver_Action, followed by the First_Crash_type.
 ## - Initial importance Graph:
-![Feature importance Initial bar](Pictures/Feature importance Initial bar.png)
+![FeatureimportanceInitialbar](Pictures/FeatureimportanceInitialbar.png)
 
 ## - Hypertuned Importance Graph:
-![Feature importance Bar hyper bar](Pictures/Feature importance hyper bar.png)
+![FeatureimportanceBarhyperbar](Pictures/Featureimportancehyperbar.png)
 
 # Future work:
 - Possible future works that can be used to make better predictions is using the location data to interpret where the most common accidents actually happen and figure out what can be done in those areas to minimise or take the accidents away completely.
