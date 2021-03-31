@@ -60,7 +60,7 @@ Looks almost the same but when you look at the actual features that are in the t
 ![FeatureimportanceInitialbar](Pictures/FeatureimportanceInitialbar.png)
 
 ## - Hypertuned Importance Graph:
-![FeatureimportanceBarhyperbar](Pictures/Featureimportancehyperbar.png)
+![FeatureimportanceBarhyperbar](Pictures/Featureimportancehypterbar.png)
 
 # Future work:
 - Possible future works that can be used to make better predictions is using the location data to interpret where the most common accidents actually happen and figure out what can be done in those areas to minimise or take the accidents away completely.
